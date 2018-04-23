@@ -1,0 +1,54 @@
+<form #cardForm="ngForm" class="editForm" novalidate>
+  <div class="form-horizontal">
+      <div class="tab-pane fade in active">
+          <h4 class="head text-center">{{title}}</h4>
+          <br/>
+          <div class='row'>
+              <div class='col-xs-offset-4 col-xs-10 col-sm-offset-5 col-sm-4'>
+                  <div class="form-group">
+                      <div class="row">
+                          <div class='col-xs-12 col-sm-6'>
+                              <div class="form-group">
+                                  <label class="control-label" for="cardtype">Card Type</label>  
+                                  <select class="form-control" #cardtype="ngModel" required id="cardtype" name="cardtype" [(ngModel)]="cardInfo.cardType">
+                                      <option selected="selected" value="">Select</option>
+                                      <option value="ccard">Credit Card</option>
+                                      <option value="dcard">Debit Card</option>
+                                  </select>   
+                                  <div class="alert alert-danger" [hidden]="cardtype.valid">Card type is required</div>
+                              </div>
+                          </div>
+                          <div class='col-xs-12 col-sm-6'>
+                              <div class="form-group">
+                                  <label class="control-label" for="cardnumber">Card Number</label>  
+                                  <input class="form-control input-md" #cardnumber="ngModel" required id="cardnumber" name="cardnumber" type="text" placeholder="16 digit Card Number" [(ngModel)]="cardInfo.cardNumber">
+                                  <div class="alert alert-danger" [hidden]="cardnumber.valid">Card Number is required</div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class='col-xs-12 col-sm-6'>
+                              <div class="form-group">
+                                  <label class="control-label" for="cardexpiry">Card Expiry</label>
+                                  <input class="form-control input-md" #cardexpiry="ngModel" required id="cardexpiry" name="cardexpiry" [(ngModel)]="cardInfo.cardExpiry">                                        
+                                  <div class="alert alert-danger" [hidden]="cardexpiry.valid">Card Expiry is required</div>
+                              </div>
+                          </div>
+                          <div class='col-xs-12 col-sm-6'>
+                              <div class="form-group">
+                                  <label class="control-label" for="cardcvv">Card CVV</label>  
+                                  <input class="form-control input-md" #cardcvv="ngModel" required id="cardcvv" name="cardcvv" type="text" placeholder="CVV" [(ngModel)]="cardInfo.cardCvv">
+                                  <div class="alert alert-danger" [hidden]="cardcvv.valid">CVV is required</div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="form-group text-center space-20">
+              <button class="btn btn-outline-rounded btn-default" (click)="goToPrevious(cardForm)"> <span style="margin-right:10px;" class="glyphicon glyphicon-arrow-left"></span> Previous</button>
+              <button class="btn btn-outline-rounded btn-info" [disabled]="!cardForm.valid" (click)="goToNext(cardForm)" type="submit"> Next <span style="margin-left:10px;" class="glyphicon glyphicon-arrow-right"></span></button>
+          </div>
+      </div>
+  </div>
+</form>

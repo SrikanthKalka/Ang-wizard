@@ -31,7 +31,7 @@ export class UserinfoComponent implements OnInit {
   goToNext(form: any) {
       if (this.save(form)) {
           // Navigate to the card page
-         //this.router.navigate(['/cardInfo']);
+         this.router.navigate(['/cardInfo']);
       }
   }
 

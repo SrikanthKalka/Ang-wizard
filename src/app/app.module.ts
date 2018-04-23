@@ -7,13 +7,17 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FormDataService } from './data/form-data.service';
 import {AppRoutingModule} from './app-routing.module';
 import { UserinfoComponent } from './userinfo/userinfo.component';
+import { CardinfoComponent } from './cardinfo/cardinfo.component';
+import { AddressInfoComponent } from './addressinfo/addressinfo.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    UserinfoComponent
+    UserinfoComponent,
+    CardinfoComponent,
+    AddressInfoComponent
   ],
   imports: [
     BrowserModule, FormsModule, AppRoutingModule
