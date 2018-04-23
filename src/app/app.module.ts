@@ -9,6 +9,7 @@ import {AppRoutingModule} from './app-routing.module';
 import { UserinfoComponent } from './userinfo/userinfo.component';
 import { CardinfoComponent } from './cardinfo/cardinfo.component';
 import { AddressInfoComponent } from './addressinfo/addressinfo.component';
+import { SummaryinfoComponent } from './summaryinfo/summaryinfo.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { AddressInfoComponent } from './addressinfo/addressinfo.component';
     NavbarComponent,
     UserinfoComponent,
     CardinfoComponent,
-    AddressInfoComponent
+    AddressInfoComponent,
+    SummaryinfoComponent
   ],
   imports: [
     BrowserModule, FormsModule, AppRoutingModule

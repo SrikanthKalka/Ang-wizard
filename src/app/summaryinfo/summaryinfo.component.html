@@ -1,0 +1,62 @@
+<form #summaryInfoForm="ngForm" class="editForm" novalidate>
+    <div class="tab-pane fade in active">
+      <h2 class="head text-center">{{title}}</h2>
+      <br/>
+      <div class="row">
+          <div class='col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8'>
+          <div class="form-group">
+              <h3> User-Information </h3>
+            <label class="control-label">First Name:
+              <h4>
+                <span class="label label-primary">{{summary.firstName}}</span>
+              </h4>
+            </label>
+            <label class="control-label">Last Name:
+              <h4>
+                <span class="label label-primary">{{summary.lastName}}</span>
+              </h4>
+            </label>
+            <label class="control-label">email :
+              
+                <h4><span class="label label-primary">{{summary.email}}</span>
+              </h4>
+            </label>
+            <label class="control-label"> Phone :
+              <h4>
+                <span class="label label-primary">{{summary.phone}}</span>
+              </h4>
+            </label>
+            <h3> Card Information </h3>
+            <label class="control-label"> Card type:
+              <h4><span class="label label-primary">{{summary.cardType}}</span></h4>
+            </label>
+            <label class="control-label"> Card Number:
+              <h4><span class="label label-primary">{{summary.cardNumber}}</span></h4>
+            </label>
+            <label class="control-label"> Card Expiry:
+              <h4><span class="label label-primary">{{summary.cardExpiry}}</span></h4>
+            </label>
+            <label class="control-label"> Card CVV:
+              <h4><span class="label label-primary">{{summary.cardCvv}}</span></h4>
+            </label>
+            <h3> Address Information </h3>
+            <label class="control-label"> Street:
+              <h4><span class="label label-primary">{{summary.street}}</span></h4>
+            </label>
+            <label class="control-label"> City:
+              <h4><span class="label label-primary">{{summary.city}}</span></h4>
+            </label>
+            <label class="control-label"> State:
+              <h4><span class="label label-primary">{{summary.state}}</span></h4>
+            </label>
+            <label class="control-label"> ZIP:
+              <h4><span class="label label-primary">{{summary.zip}}</span></h4>
+            </label>
+          </div>
+          <div class="form-group text-center">
+              <button type="submit" class="btn btn-success btn-outline-rounded btn-info" > Submit <span style="margin-left:10px;" class="glyphicon glyphicon-edit"></span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>

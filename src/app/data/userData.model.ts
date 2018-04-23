@@ -51,3 +51,20 @@ export class AddressInfo{
     zip: string;
 
 }
+
+export class summaryInfo{
+
+    firstName: string;
+    lastName: string;
+    email: string;
+    phone: string;
+    cardType: string;
+    cardNumber: string;
+    cardExpiry: string;
+    cardCvv: string;
+    street: string;
+    city: string;
+    state: string;
+    zip: string;
+
+}

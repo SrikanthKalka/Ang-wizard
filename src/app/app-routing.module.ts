@@ -3,11 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { UserinfoComponent } from './userinfo/userinfo.component';
 import { CardinfoComponent } from './cardinfo/cardinfo.component';
 import { AddressInfoComponent } from './addressinfo/addressinfo.component';
+import { SummaryinfoComponent } from './summaryinfo/summaryinfo.component';
 
 export const appRoutes: Routes = [
     {path: 'personalInfo', component: UserinfoComponent},
     {path: 'cardInfo', component: CardinfoComponent},
     {path: 'addressInfo', component: AddressInfoComponent},
+    {path: 'summaryInfo', component: SummaryinfoComponent},
     {path: '', redirectTo: '/personalInfo', pathMatch: 'full'},
     {path: '**', component: UserinfoComponent},
 ]
